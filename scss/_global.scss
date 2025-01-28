@@ -1,0 +1,724 @@
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Roboto", serif;
+  &.overflow {
+    overflow: hidden !important;
+  }
+}
+
+body {
+  @include flex;
+  @include dir-col;
+  @include justify-between;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", serif;
+}
+
+input,
+textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  background: none;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.get-consultation {
+  padding: 20px 0;
+  background: #26211f;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    padding: 30px 20px;
+  }
+  .wrapper {
+    @include flex;
+    @include align-center;
+    @include justify-between;
+    @media (max-width: 1024px) {
+      @include dir-col;
+    }
+    .orange-btn {
+      max-width: 240px;
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+    h3 {
+      color: #fff;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.988px;
+      @media (max-width: 1024px) {
+        font-size: 40px;
+        margin: 30px auto;
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+.tour-3d {
+  margin: 20px 0;
+  .info {
+    background: #d9d9d9;
+    @include flex;
+    height: 500px;
+    @media (max-width: 767px) {
+      height: 60vw;
+    }
+    span {
+      margin: auto;
+      font-size: 40px;
+    }
+  }
+}
+
+.request-call {
+  padding: 15px;
+  background: #26211f;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  @include flex;
+  border-radius: 20px;
+  @include align-center;
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+  }
+  .text-wrap {
+    width: 45%;
+    padding: 0 30px;
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .img-wrap {
+    width: 55%;
+    @include flex;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .style {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    @media (max-width: 1024px) {
+      width: 850px;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+      line-height: 100%;
+      font-size: 28px;
+    }
+    span {
+      font-family: "KZ PF Champion Script Pro";
+      font-size: 90px;
+      line-height: 100%;
+      position: relative;
+      top: 25px;
+      @media (max-width: 767px) {
+        font-size: 60px;
+        top: 20px;
+      }
+    }
+  }
+  .request-form {
+    width: 100%;
+    .input {
+      margin-bottom: 30px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+      span {
+        display: block;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        @media (max-width: 767px) {
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+    input {
+      width: 100%;
+      height: 45px;
+      border-radius: 50px;
+      padding: 0 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #23123c;
+      @media (max-width: 767px) {
+        height: 40px;
+      }
+    }
+    button {
+      height: 45px;
+      width: 100%;
+      @include flex;
+      @include align-center;
+      @include justify-center;
+      padding: 11.998px 51.425px 11.997px 51.422px;
+      border-radius: 48.209px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: #ac714e;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      @media (max-width: 767px) {
+        height: 40px;
+      }
+    }
+  }
+}
+
+.info-wrap {
+  margin-top: 50px;
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+  .wrapper {
+    h2 {
+      color: #26211f;
+      font-family: "KZ PF Champion Script Pro";
+      font-size: 100px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 80%;
+      margin-bottom: 50px;
+      text-align: center;
+      @media (max-width: 1024px) {
+        font-size: 80px;
+      }
+      @media (max-width: 767px) {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      max-width: 925px;
+      width: 100%;
+      margin: 0 auto 50px;
+      color: #181818;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+    }
+    .info-tags {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 8px;
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      @media (max-width: 475px) {
+        grid-template-columns: 1fr;
+      }
+      .info-tag {
+        border-radius: 10px;
+        border: 1.899px solid rgba(246, 244, 242, 0.5);
+        background: #26211f;
+        padding: 7px 10px 7px 10px;
+        @include flex;
+        @include align-center;
+        @include justify-between;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        .icon {
+          width: 32px;
+          min-width: 32px;
+          height: 32px;
+          padding: 5px;
+          background: #ac714e;
+          @include flex;
+          margin-left: 5px;
+          border-radius: 5px;
+          img {
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .info-slider {
+    .item {
+      margin: 40px 0;
+      transition: 0.3s;
+      width: 320px;
+      height: 300px;
+      @include flex;
+      @media (max-width: 767px) {
+        width: auto;
+        height: auto;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &.slick-center {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.planning-solutions {
+  margin: 20px 0 40px;
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: "";
+    background: url(../img/planning-solutions-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+}
+
+.orange-btn {
+  @include align-center;
+  @include flex;
+  @include justify-center;
+  border-radius: 26.376px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.9;
+  background: #ac714e;
+  color: #f6f4f2;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 12px 40px;
+  &:hover {
+    background: lighten(#ac714e, 7%);
+  }
+}
+
+.slider-navigation {
+  @include flex;
+  position: static;
+  bottom: 50px;
+  right: 60px;
+  z-index: 10;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 40px;
+  @include align-center;
+  @include justify-between;
+  @media (max-width: 767px) {
+    width: 80px;
+  }
+  button {
+    position: static;
+    transform: translate(0, 0);
+    width: auto;
+    height: auto;
+    @include flex;
+    width: 44px;
+    background: #26211f;
+    height: 44px;
+    border-radius: 50%;
+    @media (max-width: 767px) {
+      width: 36px;
+      height: 36px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    img {
+      margin: auto;
+      @media (max-width: 767px) {
+        width: 16px;
+      }
+    }
+    &:before {
+      content: none;
+    }
+    &.slick-prev {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.planning-solutions-wrap {
+  @include flex;
+  flex-direction: row-reverse;
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+  .slider-nav {
+    .slick-list {
+      margin: -10px;
+    }
+    .item {
+      height: 140px;
+      border-radius: 10px;
+      box-shadow: 3.058px 3.058px 7.646px 0px rgba(0, 0, 0, 0.25);
+      margin: 10px;
+      opacity: 0.5;
+      @media (max-width: 767px) {
+        margin: 0 6px;
+        height: auto;
+        border-radius: 8px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      &.slick-current {
+        opacity: 1;
+      }
+    }
+  }
+  .slider-for {
+    .slick-list {
+      margin: -15px;
+    }
+    .item {
+      @include flex;
+      border-radius: 10px;
+      margin: 15px;
+      box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .left {
+    width: 240px;
+    min-width: 240px;
+    margin-left: 15px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    @include flex;
+    @include align-center;
+    padding: 30px 20px;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+      padding: 20px 15px;
+      display: block;
+    }
+  }
+  .right {
+    width: calc(100% - 255px);
+    padding: 30px 40px;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    @media (max-width: 1024px) {
+      padding: 30px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 20px;
+    }
+    .arrow-wrap {
+      @include flex;
+      @include align-center;
+      @include justify-between;
+      margin-top: 20px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    h2 {
+      font-size: 50px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #26211f;
+      @media (max-width: 1024px) {
+        font-size: 30px;
+      }
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.map-info-block {
+  margin: 50px 0 20px;
+  h2 {
+    color: #26211f;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80%;
+    margin: 0 auto 50px;
+    font-family: "KZ PF Champion Script Pro";
+    text-align: center;
+    position: relative;
+    top: 25px;
+  }
+  .map-img {
+    width: 100%;
+    margin-top: 30px;
+  }
+  p {
+    max-width: 925px;
+    color: #181818;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto 50px;
+    width: 100%;
+  }
+  .map-info-slider {
+    &.slick-list {
+      margin: 0 -10px;
+    }
+    .item {
+      width: 220px;
+      height: 120px;
+      border-radius: 15px;
+      border: 2px solid rgba(246, 244, 242, 0.5);
+      background: #26211f;
+      padding: 10px;
+      @include flex;
+      @include dir-col;
+      align-items: flex-start;
+      @include justify-between;
+      margin: 0 10px;
+      b {
+        color: #f6f4f2;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .minute {
+        @include flex;
+        @include align-center;
+        font-size: 12px;
+        color: white;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+#video {
+  .video {
+    height: 40vw;
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.green-info-style {
+  background-color: #26211f;
+  padding: 30px 0;
+  margin: 15px 0;
+  .wrapper {
+    @include flex;
+    @include justify-between;
+    @include align-center;
+    @media (max-width: 1024px) {
+      @include dir-col;
+    }
+    h2 {
+      max-width: 270px;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 100%;
+      @media (max-width: 1024px) {
+        text-align: center;
+        font-size: 32px;
+        margin: 20px auto;
+      }
+    }
+    .form {
+      @include dir-col;
+      @include flex;
+      max-width: 380px;
+      width: 100%;
+      input {
+        height: 44px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        border-color: #fff;
+        background: white;
+        padding: 0 15px;
+        margin-bottom: 10px;
+        @include placeholder {
+          font-size: 16px;
+          font-weight: 600;
+          color: #999999;
+        }
+      }
+      button {
+        width: 100%;
+      }
+    }
+    .green-arr-btn {
+      border-color: white;
+      background: transparent;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .info {
+      @include flex;
+      @include dir-col;
+      @media (max-width: 1024px) {
+        text-align: center;
+        margin: 20px 0;
+      }
+      b {
+        font-size: 40px;
+        display: block;
+        color: white;
+        font-weight: normal;
+        @media (max-width: 1024px) {
+          font-size: 32px;
+        }
+      }
+      span {
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+  &.white-info-style {
+    background: white;
+    h2 {
+      color: #000;
+    }
+    .form {
+      input {
+        border: 1px solid #033020;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
