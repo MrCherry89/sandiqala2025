@@ -105,9 +105,9 @@ $(document).ready(function () {
     dots: false,
     variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     cssEase: "ease-in-out",
-    speed: 800,
+    speed: 700,
   });
 
   AOS.init();
