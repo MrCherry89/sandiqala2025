@@ -1,4 +1,28 @@
 $(document).ready(function () {
+  $(".popup-gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+    },
+  });
+
+  $(".popup-gallery2").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+    },
+  });
+
   $(".slider-for").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -7,6 +31,7 @@ $(document).ready(function () {
     prevArrow: $(".planning-solutions-wrap .slider-navigation .slick-prev"),
     nextArrow: $(".planning-solutions-wrap .slider-navigation .slick-next"),
   });
+
   $(".slider-nav").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
