@@ -1411,6 +1411,10 @@ a:focus {
 }
 .birds .img img {
   width: 100%;
+  transition: 0.3s;
+}
+.birds .img:hover img {
+  transform: scale(1.02);
 }
 .birds h2 {
   text-align: center;
